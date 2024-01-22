@@ -230,6 +230,7 @@
 
 
 # =================Multiple===Inheritance==================
+
 # class A:
 #     def __init__(self):
 #         print("__init__of class A")
@@ -308,49 +309,56 @@
 
 
 
-#===================abstract class & method================
-from abc import ABC , abstractmethod
 
-class Animal(ABC):
-    @abstractmethod
-    def make_sound(self):
-        pass
-    
-    def eat(self):
-        print("I am eatting")
-        
-    #=================================
-    
-class Dog(Animal):
-    def make_sound(self):
-        print("Dog is Barking.")
-    
-    #=================================
-class Cat(Animal):
-    def make_sound(self):
-        print("Cat is Meow Meow.")
-        
-    #=================================
-class Snake(Animal):
-    def make_sound(self):
-        print("Snake is Hiss Hiss.")
-        
-    #=================================
-    
-print()       
-d1 = Dog()
-d1.eat()
-d1.make_sound()
 
-print()     
-c1 = Cat() 
-c1.eat()
-c1.make_sound()
 
-print()    
-s1 = Snake() 
-s1.eat()
-s1.make_sound()
-        
+# ===================abstract class & method================
 
-    
+# from abc import ABC, abstractmethod
+
+# class Animal(ABC):
+#     @abstractmethod
+#     def make_sound(self):
+#         pass
+
+#     def eat(self):
+#         print("I am eatting")
+
+#     # =================================
+
+
+# class Dog(Animal):
+#     def make_sound(self):
+#         print("Dog is Barking.")
+
+#     # =================================
+
+
+# class Cat(Animal):
+#     def make_sound(self):
+#         print("Cat is Meow Meow.")
+
+#     # =================================
+
+
+# class Snake(Animal):
+#     def make_sound(self):
+#         print("Snake is Hiss Hiss.")
+
+#     # =================================
+
+
+# print()
+# d1 = Dog()
+# d1.eat()
+# d1.make_sound()
+
+# print()
+# c1 = Cat()
+# c1.eat()
+# c1.make_sound()
+
+# print()
+# s1 = Snake()
+# s1.eat()
+# s1.make_sound()

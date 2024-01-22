@@ -1,6 +1,106 @@
 
 # ===============Python function===========#
 
+
+# Example 01:
+# def hello():
+#   print("Hello !  My Name is Manoj Gain.")
+
+# hello()
+
+
+# Example 02:
+# def add(x,y):
+#   z = x+y
+#   print(z)
+
+# add(10 ,5)
+
+
+# Example 03:
+# def add (x ,y):
+#   z  = x+y
+#   a = x-y
+#   return z,a
+
+# sum,sub = add(10 ,5)
+# print()
+# print("Value is sum:-", sum)
+# print("Value is sum:-" ,sub)
+
+# ==============lambda function==============
+# def add(a):
+#   return a+10
+
+# sum = add(12)
+# print(sum)
+
+
+# or
+# g = lambda a:a*a
+
+# print(g(12))
+
+# or
+# g = lambda a,b,c,d:a*b*c+d
+
+# print(g(12,10,2,10))
+
+
+# =============filter, map ,reduce, function============
+
+# lst = [1,2,3,4,5,6,7,8,9,10]
+
+# new_lst = []
+
+# for i in lst:
+#   if i % 2 == 1:
+#     print(i)
+#     new_lst.append(i)
+
+# print(new_lst)
+
+
+# =============filter function============
+
+# lst = [1,2,3,4,5,6,7,8,9,10]
+
+# g = lambda x:(x % 2)==1
+# new_lst = list(filter(lambda x:(x % 2)==1,lst))
+# print(new_lst)
+
+# =======OR============
+
+# lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# print(list(filter(lambda x: (x % 2) == 1, lst)))
+
+# =======OR============
+
+# print(list(filter(lambda x: (x % 2) == 1, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])))
+
+
+# =============Map function============
+
+# lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# # g = lambda x: x*x
+# print(list(map(lambda x: x*x, lst)))
+
+
+
+# =============Reduce function============
+
+# from functools import reduce
+
+# sum = reduce(lambda x,y:x+y, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+# print()
+# print(sum)
+
+
+
+
+
 # Function 2 types
 # 1.Built in Function
 # 2. User define Function
@@ -19,6 +119,7 @@
 
 # print(),len(),range(),enumerate()
 
+
 # 2. User define Function
 
 # def informations(name,number,email):
@@ -28,9 +129,9 @@
 
 # informations("Manoj Gain","01911715356","manojgain@gmail.com")
 
-  #OR
-  
-  
+# OR
+
+
 # def informations(name,number,email):
 #     print(f"your name is: {name}")
 #     print(f"your number is: {number}")
@@ -41,11 +142,9 @@
 # while True:
 #     name = str(input("Enter your name :"))
 #     number = str(input("Enter your number :"))
-#     email = str(input("Enter your email :")) 
+#     email = str(input("Enter your email :"))
 #     informations(name,number,email)
 #     print()
-
-
 
 
 # default arguments:
@@ -55,21 +154,18 @@
 #     print(f"Your Name is: {name}")
 #     print(f"Your Number is: {number}")
 #     print(f"Your Email is: {email}")
-    
+
 # informations()
 
 
-#required possitional function
+# required possitional function
 # def informations(name, number,email="manoj@gmail.com"):
 #     print()
 #     print(f"Your Name is: {name}")
 #     print(f"Your Number is: {number}")
 #     print(f"Your Email is: {email}")
-     
+
 # informations("Manoj Gain", "01911715356", )
-
-
-
 
 
 #  keyword arguments:
@@ -78,10 +174,8 @@
 #     print(f"Your Name is: {name}")
 #     print(f"Your Number is: {number}")
 #     print(f"Your Email is: {email}")
-     
+
 # informations(name = "Manoj Gain", number="01911715356",  email="manoj@gmail.com" )
-
-
 
 
 #  length arguments:
@@ -91,19 +185,14 @@
 # informations("Manoj Gain", "Bithi",  "Juthi" )
 
 
-
-
 # def my_function(child3, child2, child1):
 #   print("The youngest child is " + child3)
 # my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
 
 
-
 # def my_function(*kids):
 #     print("The youngest child is " + kids[2])
 # my_function("Emil", "Tobias", "Linus")
-
-
 
 
 # #  keywords length arguments:
@@ -113,75 +202,62 @@
 # informations("Manoj", "Gain", "Bithi",  "Juthi" )
 
 
-
-
 # def my_function(**kid):
 #     print("His last name is " + kid["lname"])
 # my_function(fname = "Tobias", lname = "Refsnes")
 
 
-
 # def largest():
 #     x=120
 #     y=100
-    
+
 #     if x > y:
 #         print(f"largest number is {x}")
 #     else:
-#         print(f"lower number is {y}") 
-# largest()  
-
-
+#         print(f"lower number is {y}")
+# largest()
 
 
 # x=1200
 # def largest():
 #     global x            #global variable
 #     y=100               #local variable
-     
+
 #     if x > y:
 #         print(f"largest number is {x}")
 #     else:
-#         print(f"lower number is {y}") 
-        
-        
+#         print(f"lower number is {y}")
+
+
 #     def sumation():
 #         print(x+y)
 #     sumation()
-    
-# largest()  
+
+# largest()
 
 
-
- 
 # x=int(input("enter your number :"))
 # def largest():
 #     global x                                  #global variable
 #     y=int(input("enter your number :"))       #local variable
-     
+
 #     if x > y:
 #         print(f"largest number is {x}")
 #     else:
-#         print(f"lower number is {y}") 
-         
+#         print(f"lower number is {y}")
+
 #     def sumation():
 #         print(x+y)
 #     sumation()
-# largest()   
-        
-        
-   
-   
-   
-        
-        
-# ১. ফাংশন  ব্যবহার করে আয়ত ক্ষেত্রফল বাহির কর ।     
-# ২. ফাংশন  ব্যবহার করে মৌলিক নাম্বার বের কর ।     
-# ৩. ফাংশন  ব্যবহার করে ফেকটোরিয়াল নাম্বার ব্যবহার কর ।     
-# ৪. ফাংশন  ব্যবহার করে   তিনটি সংখ্যার বড় সংখ্যা বের কর ।     
-        
-       
-       
+# largest()
+
+
+# ১. ফাংশন  ব্যবহার করে আয়ত ক্ষেত্রফল বাহির কর ।
+# ২. ফাংশন  ব্যবহার করে মৌলিক নাম্বার বের কর ।
+# ৩. ফাংশন  ব্যবহার করে ফেকটোরিয়াল নাম্বার ব্যবহার কর ।
+# ৪. ফাংশন  ব্যবহার করে   তিনটি সংখ্যার বড় সংখ্যা বের কর ।
+
+
 # একটি ফাংশন যা আযাত বের করে
 # def calculate_area(length, width):
 #     area = length * width
@@ -209,9 +285,6 @@
 # print(f"Total Area: ", result)
 
 
-
-
-
 # def is_prime(num):
 #     if num > 1:
 #         for i in range(2, int(num**0.5) + 1):
@@ -233,9 +306,6 @@
 # print("মৌলিক নাম্বারগুলি হলো:", prime_numbers)
 
 
-
-
-
 # def factorial(n):
 #     if n == 0 or n == 1:
 #         return 1
@@ -249,12 +319,6 @@
 # print(f"{num} এর ফ্যাক্টোরিয়াল হলো: {result}")
 
 
-
-
-
-
-
- 
 # def find_largest_number(a, b, c):
 #     largest = max(a, b, c)
 #     return largest
@@ -281,4 +345,3 @@
 
 # result = largest_number(num1,num2,num3)
 # print(f"largest Number :" ,result)
-  
