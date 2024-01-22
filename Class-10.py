@@ -122,23 +122,22 @@
 # b2.details()
 
 
-
 # ============Singal===Inheritance======================
 # class Animal:
-    
+
 #     def __init__(self, name):
 #         self.name = name
-        
+
 #     def eat(self):
-#         print(self.name, "is eating") 
-        
-        
-# class Dog(Animal): 
-        
+#         print(self.name, "is eating")
+
+
+# class Dog(Animal):
+
 #     def bark(self):
-#         print(self.name, "is barking")   
-        
-        
+#         print(self.name, "is barking")
+
+
 # a1 = Animal("jack")
 # d1 = Dog("Rover")
 # a1.eat()
@@ -152,38 +151,32 @@
 # print(issubclass(Dog, Animal))
 
 
-
-
 # ==========Hierarchical===Inheritance=======================
 # class Student:
 #     def __init__(self,name,Id):
 #         self.name = name
 #         self.id = Id
-        
+
 #     def details(self):
 #         print("Name:",self.name,"ID:",self.id)
 
 
-
-     
 # class CSEStudent(Student):
 #     def __init__(self,name, Id,labs):
 #         super().__init__(name,Id)
 #         self.no_of_labs = labs
-        
+
 #     def cry(self):
 #         print("CSE student are always crying becouse of they has per day",self.no_of_labs,"labs class")
-        
-        
-        
-        
+
+
 # class BBAStudent(Student):
-    
+
 #     def party(self):
 #         print("Thet are always Party")
-        
-        
-# print()      
+
+
+# print()
 # s1 = CSEStudent("Manoj Gain ,",420,3)
 # s2= BBAStudent("Bithi ,",220)
 
@@ -193,48 +186,39 @@
 # s2.party()
 
 
-
-
-
-
-#=================Multilevel===Inheritance==================
+# =================Multilevel===Inheritance==================
 
 # class Student:                           #grand parent class
 #     def __init__(self,name ,Id):
 #         self.name = name
 #         self.id = Id
-        
+
 #     def details(self):
 #         print("Name:",self.name, "ID:", self.id)
-        
-        
-        
-        
+
+
 #            #=========================
 # class CSEStudent(Student):                #parent class
 #     def __init__(self,name,Id,labs):
 #         super().__init__(name,Id)
 #         self.no_of_labs = labs
-        
+
 #     def cry(self):
 #         print(self.name ,"They are always crying they has per day", self.no_of_labs, "labs class")
-        
-        
-        
-        
+
+
 #         #===========================
 # class CSEFresher(CSEStudent):            #child class
-    
+
 #     def enroll_CSE110(self):
 #         print(self.name,"Enrolled in CSE100")
-    
+
 #     def party(self):
 #         print("They are always Happy")
-        
-        
-        
+
+
 #       #=============================
-# print()    
+# print()
 # s1 = CSEStudent("Manoj Gain,", 420, 3)
 # s2 = CSEFresher("Bithi,",220, 2)
 # s1.details()
@@ -245,84 +229,128 @@
 # s2.enroll_CSE110()
 
 
-
-
-
-
-#=================Multiple===Inheritance==================
+# =================Multiple===Inheritance==================
 # class A:
 #     def __init__(self):
 #         print("__init__of class A")
-        
+
 #     def method1(self):
 #         print("Method1 od class A")
-        
+
 #     #================================
 # class B:
 #     def __init__(self):
 #         print("__init__of class B")
-        
+
 #     def method1(self):
 #         print("Method1 od class B")
-        
+
 #     #================================
 # class C(A,B):
 #     def __init__(self):
 #         print("__init__of class C")
-        
+
 #     def method2(self):
 #         print("Method2 od class C")
-        
+
 #     #================================
-    
-    
+
+
 # c1 = C()
 # c1.method1()
 
 
-
-#=================__str__==================
+# =================__str__==================
 # class Student:
-    
+
 #     def __init__(self, name, Id):
 #         self.name = name
 #         self.id = Id
 #         # print(self)
-        
-#     def __str__(self):
-#         return "My name is "+ self.name 
 
-# print()       
+#     def __str__(self):
+#         return "My name is "+ self.name
+
+# print()
 # s1 = Student("Manoj Gain", 33)
 # s2 = Student("Bithi Gain", 23)
 # print(s1)
 # print(s2)
 
 
+# ================composition has a relation=====================
 
-#================composition has a relation=====================
- 
 # class Engine:                        #parent class
 #     def __init__(self ,cc):
 #         self.capacity = cc
-    
+
 #     def start(self):
 #         print("Engine is Started")
-        
+
 #     def stop(self):
 #         print("Engine is stopped")
-        
+
 #     #================================
 # class Car(Engine):                 #child class
 #     def __init__(self, name, cc):
 #         self.engine = Engine(cc)
-#         self.name = name  
-          
+#         self.name = name
+
 #     def run(self):
 #         self.engine.start()
 #         print("Car is Running")
-        
+
 #     #================================
 # print()
 # c1 = Car("Toyota", 2500)
 # c1.run()
+
+
+
+
+#===================abstract class & method================
+from abc import ABC , abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass
+    
+    def eat(self):
+        print("I am eatting")
+        
+    #=================================
+    
+class Dog(Animal):
+    def make_sound(self):
+        print("Dog is Barking.")
+    
+    #=================================
+class Cat(Animal):
+    def make_sound(self):
+        print("Cat is Meow Meow.")
+        
+    #=================================
+class Snake(Animal):
+    def make_sound(self):
+        print("Snake is Hiss Hiss.")
+        
+    #=================================
+    
+print()       
+d1 = Dog()
+d1.eat()
+d1.make_sound()
+
+print()     
+c1 = Cat() 
+c1.eat()
+c1.make_sound()
+
+print()    
+s1 = Snake() 
+s1.eat()
+s1.make_sound()
+        
+
+    
