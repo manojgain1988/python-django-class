@@ -1,7 +1,5 @@
 
-
 # ===============Python function===========
-
 
 # Function 2 types
 # 1.Built in Function
@@ -60,7 +58,7 @@
 # informations()
 
 
-# required possitional function
+#  possitional arguments
 # def informations(name, number,email="manoj@gmail.com"):
 #     print()
 #     print(f"Your Name is: {name}")
@@ -77,21 +75,38 @@
 #     print(f"Your Number is: {number}")
 #     print(f"Your Email is: {email}")
 
-# informations(name = "Manoj Gain", number="01911715356",  email="manoj@gmail.com" )
+# informations(name = "Manoj Gain", number="01911715356",  email="manoj@gmail.com")
 
 
+
+#====================================
 #  length arguments:
 # def informations(*name):
 #     for x in name:
 #         print(x)
 # informations("Manoj Gain", "Bithi",  "Juthi" )
 
+            #======OR==========
+            
+# def add(a,*b):
+#     print(a)
+#     print(b)
+#     c=a 
+#     for x in b:
+#         c=c+x
+#     print(c)
+        
+# add(5,10,15,20)
+
+
+            #======OR==========
 
 # def my_function(child3, child2, child1):
 #   print("The youngest child is " + child3)
 # my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
 
 
+#====================================
 # def my_function(*kids):
 #     print("The youngest child is " + kids[2])
 # my_function("Emil", "Tobias", "Linus")
@@ -249,7 +264,10 @@
 # print(f"largest Number :" ,result)
 
 
-# ================== function & class practice=======================
+
+
+
+# ========== function & class practice=================
 
 
 # Example 01:
@@ -266,8 +284,20 @@
 
 # add(10 ,5)
 
+         #====================
 
 # Example 03:
+# def add (x ,y):
+#   z  = x+y
+#   return z
+
+# sun = add(10,20)
+# print(sun)
+
+
+  #====================
+
+# Example 04:
 # def add (x ,y):
 #   z  = x+y
 #   a = x-y
@@ -276,9 +306,11 @@
 # sum,sub = add(10 ,5)
 # print()
 # print("Value is sum:-", sum)
-# print("Value is sum:-" ,sub)
+# print("Value is sum:-", sub)
 
-# ==============lambda function==============
+
+
+# ==============lambda/Anonymous function==============
 # def add(a):
 #   return a+10
 
@@ -286,38 +318,42 @@
 # print(sum)
 
 
-# or
+            #==========or===========
+# g = lambda a:a+10
+# sum =g(12)
+# print(sum)
+
+
+            #==========or===========
 # g = lambda a:a*a
 
 # print(g(12))
 
-# or
-# g = lambda a,b,c,d:a*b*c+d
+# ================or===============
 
-# print(g(12,10,2,10))
+# g = lambda a,b,c,d : a*b*c+d
+# print(g(10,15,2,10))
 
 
 # =============filter, map ,reduce, function============
 
 # lst = [1,2,3,4,5,6,7,8,9,10]
-
 # new_lst = []
-
 # for i in lst:
-#   if i % 2 == 1:
+#   if i % 2 ==1:
 #     print(i)
 #     new_lst.append(i)
-
+# print()
 # print(new_lst)
 
 
 # =============filter function============
-
 # lst = [1,2,3,4,5,6,7,8,9,10]
 
-# g = lambda x:(x % 2)==1
-# new_lst = list(filter(lambda x:(x % 2)==1,lst))
+# # g = lambda x:(x % 2)==1
+# new_lst =list(filter(lambda x:(x % 2)==1,lst))
 # print(new_lst)
+
 
 # =======OR============
 
@@ -330,24 +366,34 @@
 # print(list(filter(lambda x: (x % 2) == 1, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])))
 
 
+
+
+
 # =============Map function============
 
 # lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
 # # g = lambda x: x*x
 # print(list(map(lambda x: x*x, lst)))
+
+    #===========OR==================
+    
+# #lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# # g = lambda x: x*x
+# print(list(map(lambda x: x*x, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])))
+
+
 
 
 # =============Reduce function============
 
 # from functools import reduce
-
-# sum = reduce(lambda x,y:x+y, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+# lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# sum = reduce(lambda x,y : x+y, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 # print()
 # print(sum)
 
 
-# ======================class  Practice========================
+# ===========class  Practice=============
 
 # class Student:
 #     def __init__(self, name, Id):        # init default constractor/method
@@ -685,6 +731,9 @@
 # s1.make_sound()
 
 
+
+
+
 # ===========if function===================
 # a = 5
 # b =5
@@ -811,10 +860,10 @@
 
 # ========OR==========
 
-for y in range(8):
-    for i in range(y+1):
-        print("*-", end="  ")
-    print()
+# for y in range(8):
+#     for i in range(y+1):
+#         print("*-", end="  ")
+#     print()
 
     # ========OR==========
 
