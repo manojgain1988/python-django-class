@@ -1,5 +1,4 @@
-def add(a):
-#   return a+10
-
-# sum = add(12)
-# print(sum)
+for y in range(8):
+    for i in range(8-y):
+        print("*-*", end="  ")
+    print()
