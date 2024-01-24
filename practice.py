@@ -1147,3 +1147,19 @@
 # c1.product(5, 10, 15, 20 ,30 ,35)
             
         
+#================Modules==================
+
+# from  practice2 import *  # / sum, sub, mul,div
+
+# result =sum(10,5)
+# print()
+# print("Finally Total Calculation is:",result) 
+
+# result =sub(10,5)
+# print("Finally Total Calculation is:",result) 
+
+# result =mul(10,5)
+# print("Finally Total Calculation is:",result) 
+
+# result =div(10,5)
+# print("Finally Total Calculation is:",result) 
