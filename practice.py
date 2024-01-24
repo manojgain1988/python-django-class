@@ -78,35 +78,33 @@
 # informations(name = "Manoj Gain", number="01911715356",  email="manoj@gmail.com")
 
 
-
-#====================================
+# ====================================
 #  length arguments:
 # def informations(*name):
 #     for x in name:
 #         print(x)
 # informations("Manoj Gain", "Bithi",  "Juthi" )
 
-            #======OR==========
-            
+# ======OR==========
+
 # def add(a,*b):
 #     print(a)
 #     print(b)
-#     c=a 
+#     c=a
 #     for x in b:
 #         c=c+x
 #     print(c)
-        
+
 # add(5,10,15,20)
 
-
-            #======OR==========
+# ======OR==========
 
 # def my_function(child3, child2, child1):
 #   print("The youngest child is " + child3)
 # my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
 
 
-#====================================
+# ====================================
 # def my_function(*kids):
 #     print("The youngest child is " + kids[2])
 # my_function("Emil", "Tobias", "Linus")
@@ -123,15 +121,88 @@
 #     print("His last name is " + kid["lname"])
 # my_function(fname = "Tobias", lname = "Refsnes")
 
+# =============OR=================
+
+# def students(name,**details):
+#     print(name)
+#     print(details)
+#     print()
+
+#     for i,j in details.items():
+#         print(i,j)
+
+# students("Manoj Gain", roll=420, sub="Web", phone="01911715356")
+
+# ============formating Method==========================
+
+# lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# def Number(lst1):
+#     even = 0
+#     odd = 0
+#     for i in lst1:
+#         if i%2==0:
+#             even+=1
+#         else:
+#             odd += 1
+#     print("Odd Number is:{},\nand Even Number is:{}".format(odd,even))
+   
+# Number(lst)
+
+#===============Factorial======================
+
+# def fact(n):
+#     res = 1
+#     for i in range(1,n+1):
+#         res = res*i     
+#     return res
+    
+# result = fact(8)
+# print(result)
+    
+    
+    
+     #================OR=================
+
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     return n *factorial(n-1)
+
+# # ফ্যাক্টোরিয়াল বের করতে ফাংশনটি ব্যবহার করুন
+# num = 6   # আপনি চাইলে এই সংখ্যাটি পরিবর্তন করতে পারেন
+# result = factorial(num)
+
+# print(f"{num} of Factorial Number is: {result}")
+
+
+
+#================Recursion=========================
+
+# import sys
+# sys.setrecursionlimit(2000) 
+# print(sys.getrecursionlimit())
+# i = 0
+# def nothing(): 
+#     global i 
+#     i+= 1  
+#     print("Hello Manoj:-",i)
+#     nothing()
+    
+# nothing()
+
+
+#=======================================================
+
 
 # def largest():
 #     x=120
 #     y=100
 
 #     if x > y:
-#         print(f"largest number is {x}")
+#         print(f"largest number is: {x}")
 #     else:
-#         print(f"lower number is {y}")
+#         print(f"lower number is: {y}")
 # largest()
 
 
@@ -223,17 +294,23 @@
 # print("মৌলিক নাম্বারগুলি হলো:", prime_numbers)
 
 
+
+
+
 # def factorial(n):
 #     if n == 0 or n == 1:
 #         return 1
 #     else:
-#         return n * factorial(n - 1)
+#         return n *factorial(n - 1)
 
 # # ফ্যাক্টোরিয়াল বের করতে ফাংশনটি ব্যবহার করুন
 # num = 5  # আপনি চাইলে এই সংখ্যাটি পরিবর্তন করতে পারেন
 # result = factorial(num)
 
-# print(f"{num} এর ফ্যাক্টোরিয়াল হলো: {result}")
+# print(f"{num} of Factorial Nimber is: {result}")
+
+
+
 
 
 # def find_largest_number(a, b, c):
@@ -264,9 +341,6 @@
 # print(f"largest Number :" ,result)
 
 
-
-
-
 # ========== function & class practice=================
 
 
@@ -284,7 +358,7 @@
 
 # add(10 ,5)
 
-         #====================
+# ====================
 
 # Example 03:
 # def add (x ,y):
@@ -294,8 +368,7 @@
 # sun = add(10,20)
 # print(sun)
 
-
-  #====================
+# ====================
 
 # Example 04:
 # def add (x ,y):
@@ -309,7 +382,6 @@
 # print("Value is sum:-", sub)
 
 
-
 # ==============lambda/Anonymous function==============
 # def add(a):
 #   return a+10
@@ -317,14 +389,12 @@
 # sum = add(12)
 # print(sum)
 
-
-            #==========or===========
+# ==========or===========
 # g = lambda a:a+10
 # sum =g(12)
 # print(sum)
 
-
-            #==========or===========
+# ==========or===========
 # g = lambda a:a*a
 
 # print(g(12))
@@ -366,22 +436,17 @@
 # print(list(filter(lambda x: (x % 2) == 1, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])))
 
 
-
-
-
 # =============Map function============
 
 # lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # # g = lambda x: x*x
 # print(list(map(lambda x: x*x, lst)))
 
-    #===========OR==================
-    
+# ===========OR==================
+
 # #lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # # g = lambda x: x*x
 # print(list(map(lambda x: x*x, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])))
-
-
 
 
 # =============Reduce function============
@@ -731,9 +796,6 @@
 # s1.make_sound()
 
 
-
-
-
 # ===========if function===================
 # a = 5
 # b =5
@@ -865,14 +927,14 @@
 #         print("*-", end="  ")
 #     print()
 
-    # ========OR==========
+# ========OR==========
 
 # for y in range(8):
 #     for i in range(8-y):
 #         print("*-*", end="  ")
 #     print()
 
-    # ========Pyramid==========
+# ========Pyramid==========
 
 
 # def print_pyramid(height):
@@ -883,24 +945,24 @@
 
 # print_pyramid(10)
 
-    # ========OR==========
+# ========OR==========
 
 # for i in range(100, 0, -2):
 #     print(i)
 
-    # ========OR==========
+# ========OR==========
 
 # my_list = [1,2,3,4,5,6,7,8,9,10]
 # for i in my_list:
 #     print(i)
 
-    # ========OR==========
+# ========OR==========
 
 # my_list = "My Name is Manoj Gain"
 # for i in my_list:
 #     print(i)
 
-    # ===============OR==================
+# ===============OR==================
 
 # x = 1
 # while x <= 5:
@@ -913,3 +975,175 @@
 #     print()
 
 #     x +=1
+
+
+
+
+# class student:
+#     def __init__(self,name,age,mobile,address):
+#         self.name = name
+#         self.age = age
+#         self.phone = mobile
+#         self.address = address
+#     print()
+#     def student_info(self):
+#         print(f"Student Name is: {self.name}\nstudent age is: {self.age}\nstudent Phone number is: {self.phone}\nstudent address is: {self.address}")
+
+#     def python(self, programming):
+#         print(f"{programming}")
+
+
+# s1 = student("Manoj Gain", "33", "01911715356", "Kotalipara")
+# s1.student_info()
+# print()
+
+# s2 = student("Bithi Gain", "23", "01911715356", "Kotalipara")
+# s2.student_info()
+
+
+# =============================Practice========================
+
+# class Student:
+#     def __init__(self, name, Id):        # init default constractor/method
+#         self.name = name                 # instance variable/property
+#         self.id = Id                     # instance variable/property
+
+#     def details(self):                   # instance method
+#         print("Name:", self.name, "Id:", self.id)
+
+
+# s1 = Student("Bob,", 11)
+# s2 = Student("Carol,", 22)
+# s1.id = 30
+# s2.id = 40
+
+# s1.details()
+# s2.details()
+
+
+# print(s1)
+# print(s2)
+
+
+# =============================Practice========================
+
+
+# class House:
+#     def __init__(self):          #init method
+#         self.window = 4          #instance variable
+#         self.door = 2            #instance variable
+
+#     def view(self):              #instance method
+#         print( self.window,"Windows" ,self.door,"Doors" )
+
+# h1 = House()
+# h2 = House()
+# h1.window = 6
+# h2.door = 3
+# h1.view()
+# h2.view()
+
+
+# =============================Practice========================
+
+# class Car:
+#     def __init__(self,name,model, color):
+#         self.name = name
+#         self.model_year = model
+#         self.color = color
+#         self.wheel = 4
+
+#     def view(self):
+#         print("This model year car is",self.name, "and models",self.model_year )
+#         print("It is a",self.wheel,"wheel car" , "and color is",self.color)
+
+# print()
+# c1 = Car("Corola","Cl24","Blue")        # Object
+# c2 = Car("NOYA","NY24","Black")         # Object
+
+# c1.wheel = 6
+# c2.wheel = 8
+
+# c1.view()
+# print()
+# c2.view()
+
+
+# =============================Practice========================
+
+# class Book:
+
+#     def __init__(self, name, author):
+#         self.name = name
+#         self.author = author
+#         self.price = 400
+
+#     def set_price(self, price):
+#         self.price = price
+
+#     def get_price(self):
+#         return self.price
+
+#     def details(self):
+#         print("Book Name :", self.name,
+#               "\nAuthor:", self.author,
+#               "\nPrice:", self.price, "Taka")
+
+
+# b1 = Book("Talk True", "Manoj Gain.", )         # Object
+# b2 = Book("Not Be Layer", "Manoj Gain.", )      # Object
+
+# print()
+# b1.set_price(350)
+# b1.details()
+
+# print()
+# b2.set_price(330)
+# b2.details()
+
+
+
+# =============================Practice========================
+# class Cat:
+    
+#     def __init__(self,color, action):  #init Method / init constractor
+#         self.color = color             #instance variable
+#         self.action = action           #instance variable
+        
+#     def view(self):                    #instance method
+#         print(self.color, "Cat", self.action) 
+        
+#     def compare(self,ct):
+#         if self.action == ct.action:
+#             print("Both cat are", ct.action)
+#         else:
+#             print("They are differents")
+        
+        
+# print()     
+# c1 = Cat("Black", "Cought A Large Rat")     #Objects
+# c2 = Cat("White", "Cought A Large Rat")     #Objects
+
+# c1.view()  
+# c2.view()
+ 
+# c1.compare(c2) 
+
+
+# =============================Practice========================
+# class my_calculator:
+    
+#     def product(self, *nums):
+#         pro = 1
+#         print(nums)
+#         for x in nums:
+#             pro = pro * x
+#         print(pro)
+    
+        
+# c1 = my_calculator()
+# c1.product(5)
+# c1.product(5, 10)
+# c1.product(5, 10, 15, 20 ,30 ,35)
+            
+        
