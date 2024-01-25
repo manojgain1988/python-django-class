@@ -146,23 +146,21 @@
 #         else:
 #             odd += 1
 #     print("Odd Number is:{},\nand Even Number is:{}".format(odd,even))
-   
+
 # Number(lst)
 
-#===============Factorial======================
+# ===============Factorial======================
 
 # def fact(n):
 #     res = 1
 #     for i in range(1,n+1):
-#         res = res*i     
+#         res = res*i
 #     return res
-    
+
 # result = fact(8)
 # print(result)
-    
-    
-    
-     #================OR=================
+
+# ================OR=================
 
 # def factorial(n):
 #     if n == 0:
@@ -176,23 +174,22 @@
 # print(f"{num} of Factorial Number is: {result}")
 
 
-
-#================Recursion=========================
+# ================Recursion=========================
 
 # import sys
-# sys.setrecursionlimit(2000) 
+# sys.setrecursionlimit(2000)
 # print(sys.getrecursionlimit())
 # i = 0
-# def nothing(): 
-#     global i 
-#     i+= 1  
+# def nothing():
+#     global i
+#     i+= 1
 #     print("Hello Manoj:-",i)
 #     nothing()
-    
+
 # nothing()
 
 
-#=======================================================
+# =======================================================
 
 
 # def largest():
@@ -294,9 +291,6 @@
 # print("মৌলিক নাম্বারগুলি হলো:", prime_numbers)
 
 
-
-
-
 # def factorial(n):
 #     if n == 0 or n == 1:
 #         return 1
@@ -308,9 +302,6 @@
 # result = factorial(num)
 
 # print(f"{num} of Factorial Nimber is: {result}")
-
-
-
 
 
 # def find_largest_number(a, b, c):
@@ -977,8 +968,6 @@
 #     x +=1
 
 
-
-
 # class student:
 #     def __init__(self,name,age,mobile,address):
 #         self.name = name
@@ -1102,64 +1091,86 @@
 # b2.details()
 
 
-
 # =============================Practice========================
 # class Cat:
-    
+
 #     def __init__(self,color, action):  #init Method / init constractor
 #         self.color = color             #instance variable
 #         self.action = action           #instance variable
-        
+
 #     def view(self):                    #instance method
-#         print(self.color, "Cat", self.action) 
-        
+#         print(self.color, "Cat", self.action)
+
 #     def compare(self,ct):
 #         if self.action == ct.action:
 #             print("Both cat are", ct.action)
 #         else:
 #             print("They are differents")
-        
-        
-# print()     
+
+
+# print()
 # c1 = Cat("Black", "Cought A Large Rat")     #Objects
 # c2 = Cat("White", "Cought A Large Rat")     #Objects
 
-# c1.view()  
+# c1.view()
 # c2.view()
- 
-# c1.compare(c2) 
+
+# c1.compare(c2)
 
 
 # =============================Practice========================
 # class my_calculator:
-    
+
 #     def product(self, *nums):
 #         pro = 1
 #         print(nums)
 #         for x in nums:
 #             pro = pro * x
 #         print(pro)
-    
-        
+
+
 # c1 = my_calculator()
 # c1.product(5)
 # c1.product(5, 10)
 # c1.product(5, 10, 15, 20 ,30 ,35)
-            
-        
-#================Modules==================
+
+
+# ================Modules==================
 
 # from  practice2 import *  # / sum, sub, mul,div
 
 # result =sum(10,5)
 # print()
-# print("Finally Total Calculation is:",result) 
+# print("Finally Total Calculation is:",result)
 
 # result =sub(10,5)
-# print("Finally Total Calculation is:",result) 
+# print("Finally Total Calculation is:",result)
 
 # result =mul(10,5)
-# print("Finally Total Calculation is:",result) 
+# print("Finally Total Calculation is:",result)
 
 # result =div(10,5)
-# print("Finally Total Calculation is:",result) 
+# print("Finally Total Calculation is:",result)
+
+
+# =================Digital clock===================
+from tkinter import *
+from tkinter.ttk import *
+from time import strftime
+
+root = Tk()
+root.title("My Digital Clock")
+
+label = Label(root, font=("ds-digital", 100),
+              background='black', foreground='cyan')
+label.pack(anchor='center')
+
+
+def time():
+    string = strftime('%H:%M:%S %p')
+    label.config(text=string)
+    label.after(1000, time)
+
+
+time()
+mainloop()
