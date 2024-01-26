@@ -47,16 +47,22 @@
 #     print()
 
 
-# default arguments:
+# =================Arguments==========================
 
-# def informations(name="Manoj Gain", number="01911715356",email="manoj@gmail.com"):
-#     print()
-#     print(f"Your Name is: {name}")
-#     print(f"Your Number is: {number}")
-#     print(f"Your Email is: {email}")
+# 01. Positional Argument
+# 02. Keyword Argument
+# 03. Deauflt Argument
+# 04. Variable length Argument
 
-# informations()
+# Example:
+# def add_num(x,y):
+#         print(x)
+#         print(y)
 
+# add_num(20,10)
+
+
+# ============possitional arguments================
 
 #  possitional arguments
 # def informations(name, number,email="manoj@gmail.com"):
@@ -67,6 +73,17 @@
 
 # informations("Manoj Gain", "01911715356", )
 
+# ===========OR=================
+
+# def Add_num(x,y):
+#         result =x+y
+#         return result
+
+# sum=Add_num(20,10)
+# print(sum)
+
+
+# ============keyword arguments================
 
 #  keyword arguments:
 # def informations(name, number,email):
@@ -77,13 +94,38 @@
 
 # informations(name = "Manoj Gain", number="01911715356",  email="manoj@gmail.com")
 
+# =============OR================
 
-# ====================================
-#  length arguments:
+# def personal(job, income):
+#     print("My job is:", job, "and Data Scientist.")
+#     print(f"My Salary is:", income, "TK")
+
+# print()
+# personal(income=20000, job="Web Development")
+
+
+# ============default Arguments================
+
+# default arguments:
+# def informations(name="Manoj Gain", number="01911715356",email="manoj@gmail.com"):
+#     print()
+#     print(f"Your Name is: {name}")
+#     print(f"Your Number is: {number}")
+#     print(f"Your Email is: {email}")
+
+# informations()
+
+
+
+# ==============Variable length arguments===========
+
+#  Variable length arguments:
 # def informations(*name):
 #     for x in name:
 #         print(x)
+# print()
 # informations("Manoj Gain", "Bithi",  "Juthi" )
+
 
 # ======OR==========
 
@@ -96,6 +138,15 @@
 #     print(c)
 
 # add(5,10,15,20)
+
+
+# ======OR==========
+# def add_num(a,*b):
+#     print(a)
+#     print(b)
+
+# add_num(5,10,15,20)
+
 
 # ======OR==========
 
@@ -133,6 +184,10 @@
 
 # students("Manoj Gain", roll=420, sub="Web", phone="01911715356")
 
+
+
+
+
 # ============formating Method==========================
 
 # lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -149,6 +204,7 @@
 
 # Number(lst)
 
+
 # ===============Factorial======================
 
 # def fact(n):
@@ -160,10 +216,11 @@
 # result = fact(8)
 # print(result)
 
-# ================OR=================
+
+# ========2nd option===========
 
 # def factorial(n):
-#     if n == 0:
+#     if n == 0  or n == 1:
 #         return 1
 #     return n *factorial(n-1)
 
@@ -255,7 +312,7 @@
 # result = calculate_area(length, width)
 # print("আয়তের ক্ষেত্রফল:", result)
 
-# OR
+# ===============OR=============================
 
 # def area(length,width):
 #   area =length*width
@@ -269,6 +326,8 @@
 
 # print(f"Total Area: ", result)
 
+
+# ===============মৌলিক নাম্বারগুল===========================
 
 # def is_prime(num):
 #     if num > 1:
@@ -291,6 +350,7 @@
 # print("মৌলিক নাম্বারগুলি হলো:", prime_numbers)
 
 
+# ================Factorial Number==============
 # def factorial(n):
 #     if n == 0 or n == 1:
 #         return 1
@@ -304,6 +364,7 @@
 # print(f"{num} of Factorial Nimber is: {result}")
 
 
+# ====================Largest Number===============
 # def find_largest_number(a, b, c):
 #     largest = max(a, b, c)
 #     return largest
@@ -1154,23 +1215,73 @@
 
 
 # =================Digital clock===================
-from tkinter import *
-from tkinter.ttk import *
-from time import strftime
 
-root = Tk()
-root.title("My Digital Clock")
+# from tkinter import *
+# from tkinter.ttk import *
+# from time import strftime
 
-label = Label(root, font=("ds-digital", 100),
-              background='black', foreground='cyan')
-label.pack(anchor='center')
+# root = Tk()
+# root.title("My Digital Clock")
 
-
-def time():
-    string = strftime('%H:%M:%S %p')
-    label.config(text=string)
-    label.after(1000, time)
+# label = Label(root, font=("ds-digital", 100),
+#               background='black', foreground='cyan')
+# label.pack(anchor='center')
 
 
-time()
-mainloop()
+# def time():
+#     string = strftime('%H:%M:%S %p')
+#     label.config(text=string)
+#     label.after(1000, time)
+
+
+# time()
+# mainloop()
+
+
+# ===============Namta for/while Loop=========================
+# for i in range(1, 101):
+#     if i == 11:
+#         break
+#     print('5 *',i, '=',i*5)
+
+# ========OR=================
+
+# i = 1
+# while i <=100:
+#     if i == 11:
+#         break
+#     print('9 *',i,'=', 9*i)
+#     i +=1
+
+
+# ==============Break/Continue====================
+
+# sent = "I Love Bangladesh and USA"
+# for i in sent.split():
+#     if i == "and":
+#         break
+#     print(i)
+
+
+# print()
+# sent = "I Love Bangladesh and USA"
+# for i in sent.split():
+#     if i == "and":
+#         continue
+#     print(i)
+
+
+# ===========Enumerate function ==================
+
+# my_list = [1,2,3,4,5,6,7,8,9,10]
+# for index,value in enumerate(my_list):
+
+#     print(index,"-",value)
+
+# ===========zip function ==================
+
+# name = ["MAnoj","Bithi","juthi"]
+# age = [33,23,18]
+# zipped_data =zip(name,age)
+# print(zipped_data)
+# print(type(zipped_data))
