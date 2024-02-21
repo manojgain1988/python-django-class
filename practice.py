@@ -185,6 +185,25 @@
 # students("Manoj Gain", roll=420, sub="Web", phone="01911715356")
 
 
+#=================Date======================
+
+# import datetime
+# today = datetime.date.today()
+# print('Today:', today)
+# yesterday = today - datetime.timedelta(days=1)
+# print('Yesterday:', yesterday)
+# tomorrow = today + datetime.timedelta(days=1)
+# print('Tomorrow:', tomorrow)
+# print('Time between tomorrow and yesterday:', tomorrow - yesterday)
+
+
+
+#=========List Comprehension================
+
+# squares =[x**2 for x in range(10)]
+# print(squares)
+
+
 
 
 
@@ -641,6 +660,7 @@
 
 
 # ==========Hierarchical===Inheritance=======================
+
 # class Student:
 #     def __init__(self,name,Id):
 #         self.name = name
@@ -687,6 +707,7 @@
 
 
 #            #=========================
+
 # class CSEStudent(Student):                #parent class
 #     def __init__(self,name,Id,labs):
 #         super().__init__(name,Id)
