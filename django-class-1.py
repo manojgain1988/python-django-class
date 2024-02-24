@@ -1,3 +1,44 @@
+python Software install
+pip install 
+python.exe -m pip install --upgrade pip 
+pip install virtualenvwrapper-Win 
+             pip install virtualenv 
+python -m venv venv 
+             activate the venv 
+pip install django  
+python -m django --version 
+python -m pip install -U django 
+django-admin startproject PrescriptionAdmin.
+django-admin startapp Prescriptionapp. 
+setting setting.py  and urls.py
+create templates, static,media asscets folder
+python manage.py collectstatic 
+python manage.py makeigrations 
+python manage.py migrate
+python manage.py runserver
+python manage.py createsuperuser
+
+pdf page create
+pip install xhtml2pdf
+
+automatically formats python code 
+pip install autopep8 
+
+python image 
+pip install pillow 
+ 
+django-admin text editor
+pip install django-ckeditor
+ 
+python bar code 
+pip install python-barcode 
+
+python-QR code
+pip install qrcode
+
+
+
+    #  ============Won ======== make==============
 python --version                               [check python version]
 pip --version                                  [check pip version]
 django-admin --version                         [check django version]
@@ -19,8 +60,7 @@ python manage.py runserver                     [for server run]
 
 
 
-
-***** project Folder create  secquence by secquence with venv by Vscode/CMD *****
+======= Need for project create  secquence by secquence with venv by Vscode/CMD =====
 
 At first select Directory/Folder
 
